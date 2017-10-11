@@ -42,8 +42,9 @@ namespace sf
 
             AcceptButton = button5; //Send
             CancelButton = button4; //Close
+            button8.Click += new EventHandler(button8_Click);
 
-			outputList_Initialize();
+            outputList_Initialize();
 
 			Settings.Read();
             TopMost = Settings.Option.StayOnTop;
@@ -668,7 +669,17 @@ namespace sf
 			scrolling = !scrolling;
 			outputList_Scroll();
 		}
+        private void button8_Click(object sender, EventArgs e)
+        {
+            TopMost = false;
 
-		#endregion
-	}
+            Form3 form3 = new Form3();
+            form3.Show();
+
+            TopMost = Settings.Option.StayOnTop;
+            Font = Settings.Option.MonoFont ? monoFont : origFont;
+        }
+
+        #endregion
+    }
 }
