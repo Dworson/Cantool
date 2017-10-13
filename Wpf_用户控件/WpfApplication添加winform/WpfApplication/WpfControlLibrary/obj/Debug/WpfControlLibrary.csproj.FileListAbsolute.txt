@@ -1,0 +1,4 @@
+C:\Users\zyqcom\Desktop\WpfApplication\WpfApplication\WpfControlLibrary\obj\Debug\UserControl.g.cs
+C:\Users\zyqcom\Desktop\WpfApplication\WpfApplication\WpfControlLibrary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\zyqcom\Desktop\WpfApplication\WpfApplication\WpfControlLibrary\obj\Debug\WpfControlLibrary_MarkupCompile.cache
+C:\Users\zyqcom\Desktop\WpfApplication\WpfApplication\WpfControlLibrary\obj\Debug\WpfControlLibrary_MarkupCompile.lref
