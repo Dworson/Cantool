@@ -19,3 +19,14 @@ F:\Cantool\com\obj\Debug\sf.Form2.resources
 F:\Cantool\com\obj\Debug\sf.Properties.Resources.resources
 F:\Cantool\com\obj\Debug\sf.csproj.GenerateResource.Cache
 F:\Cantool\com\obj\Debug\sf.Form3.resources
+C:\homework\Cantool\com\obj\Debug\sf.exe
+C:\homework\Cantool\com\obj\Debug\sf.pdb
+C:\homework\Cantool\com\bin\Debug\sf.exe
+C:\homework\Cantool\com\bin\Debug\sf.pdb
+C:\homework\Cantool\com\obj\Debug\sf.csprojResolveAssemblyReference.cache
+C:\homework\Cantool\com\obj\Debug\Termie.AboutBox.resources
+C:\homework\Cantool\com\obj\Debug\sf.Form1.resources
+C:\homework\Cantool\com\obj\Debug\sf.Form2.resources
+C:\homework\Cantool\com\obj\Debug\sf.Form3.resources
+C:\homework\Cantool\com\obj\Debug\sf.Properties.Resources.resources
+C:\homework\Cantool\com\obj\Debug\sf.csproj.GenerateResource.Cache

@@ -28,3 +28,17 @@ E:\WindowsFormstest\WindowsFormstest\obj\x86\Debug\WindowsFormstest.csprojResolv
 E:\WindowsFormstest\WindowsFormstest\obj\x86\Debug\WindowsFormstest.Form1.resources
 E:\WindowsFormstest\WindowsFormstest\obj\x86\Debug\WindowsFormstest.Properties.Resources.resources
 E:\WindowsFormstest\WindowsFormstest\obj\x86\Debug\WindowsFormstest.csproj.GenerateResource.Cache
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\obj\x86\Debug\WindowsFormstest.exe
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\obj\x86\Debug\WindowsFormstest.pdb
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\bin\x86\Debug\WindowsFormstest.exe
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\bin\x86\Debug\WindowsFormstest.pdb
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\bin\x86\Debug\Microsoft.Practices.Prism.dll
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\bin\x86\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\bin\x86\Debug\WpfControlLibrary.pdb
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\bin\x86\Debug\Microsoft.Practices.Prism.pdb
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\bin\x86\Debug\Microsoft.Practices.Prism.xml
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\bin\x86\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\obj\x86\Debug\WindowsFormstest.csprojResolveAssemblyReference.cache
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\obj\x86\Debug\WindowsFormstest.Form1.resources
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\obj\x86\Debug\WindowsFormstest.Properties.Resources.resources
+C:\homework\Cantool\WindowsFormstest\WindowsFormstest\obj\x86\Debug\WindowsFormstest.csproj.GenerateResource.Cache

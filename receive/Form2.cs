@@ -43,7 +43,7 @@ namespace sf
                 if (baudRates[i] == Settings.Port.BaudRate)
                     found = i;
             }
-            comboBox2.SelectedIndex = found;
+            comboBox2.SelectedIndex = 12;
 
             comboBox3.Items.Add("5");
             comboBox3.Items.Add("6");
@@ -57,11 +57,12 @@ namespace sf
             }
             comboBox4.SelectedIndex = (int)Settings.Port.Parity;
 
-            foreach (string s in Enum.GetNames(typeof(StopBits)))
-            {
-                comboBox5.Items.Add(s);
-            }
-            comboBox5.SelectedIndex = (int)Settings.Port.StopBits;
+            //停止位选择项
+            comboBox5.Items.Add("0");
+            comboBox5.Items.Add("1");
+            comboBox5.Items.Add("1.5");
+            comboBox5.Items.Add("2");
+            comboBox5.SelectedIndex = 1;//默认为1    
 
             foreach (string s in Enum.GetNames(typeof(Handshake)))
             {
