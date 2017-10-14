@@ -53,6 +53,7 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="CommPort.cs" />
+    <Compile Include="DrawImage.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

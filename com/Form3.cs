@@ -14,6 +14,7 @@ namespace sf
     {
         private class Line
         {
+            private DrawImg dImg = new DrawImg();
             public string Str;
             public Color ForeColor;
 
@@ -32,20 +33,9 @@ namespace sf
         public Form3()
         {
             InitializeComponent();
-            //AcceptButton = button5; //Send
-            CancelButton = button4; //Close
-            button4.Click += new EventHandler(button4_Click);
-           //utputList_Initialize();
+    
 
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-          //outputList_ClearAll();
-        }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }

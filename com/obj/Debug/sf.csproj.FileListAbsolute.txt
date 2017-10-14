@@ -19,3 +19,5 @@ F:\Cantool\com\obj\Debug\sf.Form2.resources
 F:\Cantool\com\obj\Debug\sf.Properties.Resources.resources
 F:\Cantool\com\obj\Debug\sf.csproj.GenerateResource.Cache
 F:\Cantool\com\obj\Debug\sf.Form3.resources
+L:\com\obj\Debug\sf.exe
+L:\com\obj\Debug\sf.pdb
