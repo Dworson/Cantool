@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace sf
@@ -14,7 +9,7 @@ namespace sf
     {
         private class Line
         {
-            private DrawImg dImg = new DrawImg();
+           // private DrawImg dImg = new DrawImg();
             public string Str;
             public Color ForeColor;
 
@@ -26,16 +21,14 @@ namespace sf
         };
 
         ArrayList lines = new ArrayList();
-
-        Font origFont;
-        Font monoFont;
-
         public Form3()
         {
             InitializeComponent();
-    
-
         }
 
+        private void zGraph1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

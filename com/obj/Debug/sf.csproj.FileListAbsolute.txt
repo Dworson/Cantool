@@ -21,3 +21,7 @@ F:\Cantool\com\obj\Debug\sf.csproj.GenerateResource.Cache
 F:\Cantool\com\obj\Debug\sf.Form3.resources
 L:\com\obj\Debug\sf.exe
 L:\com\obj\Debug\sf.pdb
+F:\Cantool\com\bin\Debug\Nobi.StatusChart.dll
+F:\Cantool\com\bin\Debug\Nobi.StatusChart.pdb
+F:\Cantool\com\bin\Debug\ZGraph.dll
+F:\Cantool\com\bin\Debug\ZGraph.xml

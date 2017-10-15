@@ -3,6 +3,7 @@ using System.IO;
 using System.IO.Ports;
 using System.Collections;
 using System.Threading;
+using UI;
 
 namespace sf
 {
@@ -67,7 +68,7 @@ namespace sf
 			{
 				_keepReading = true;
 				_readThread = new Thread(ReadPort);
-				_readThread.Start();
+                _readThread.Start();
 			}
 		}
 
@@ -163,6 +164,7 @@ namespace sf
             }
         }
 
+
         /// <summary> Close the serial port. </summary>
         public void Close()
         {
@@ -207,5 +209,6 @@ namespace sf
                 _serialPort.Write(data + lineEnding);
             }
         }
+
     }
 }

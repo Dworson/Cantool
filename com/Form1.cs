@@ -8,6 +8,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Termie;
+using System.Management.Instrumentation;
+using System.IO.Ports;
+using UI;
+using ZhengJuyin.UI;
 
 namespace sf
 {
@@ -61,8 +65,8 @@ namespace sf
             com.Open();
 		}
 
-		// shutdown the worker thread when the form closes
-		protected override void OnClosed(EventArgs e)
+        // 窗体关闭时关闭工作线程。
+        protected override void OnClosed(EventArgs e)
 		{
 			CommPort com = CommPort.Instance;
 			com.Close();
@@ -70,11 +74,11 @@ namespace sf
 			base.OnClosed(e);
 		}
 
-		/// <summary>
-		/// output string to log file
-		/// </summary>
-		/// <param name="stringOut">string to output</param>
-		public void logFile_writeLine(string stringOut)
+        /// <summary>
+        /// 输出字符串到日志文件
+        /// </summary>
+        /// <param name="stringOut">string to output</param>
+        public void logFile_writeLine(string stringOut)
 		{
 			if (Settings.Option.LogFileName != "")
 			{
@@ -388,12 +392,14 @@ namespace sf
 		/// </summary>
 		private Line partialLine = null;
 
-		/// <summary>
-		/// Add data to the output.
-		/// </summary>
-		/// <param name="StringIn"></param>
-		/// <returns></returns>
-		private Line AddData(String StringIn)
+        public object SymbolType { get; private set; }
+
+        /// <summary>
+        /// Add data to the output.
+        /// </summary>
+        /// <param name="StringIn"></param>
+        /// <returns></returns>
+        private Line AddData(String StringIn)
 		{
 			String StringOut = PrepareData(StringIn);
 
@@ -468,17 +474,17 @@ namespace sf
 			textBox1.Text = status;
 		}
 
-		#endregion
+        #endregion
 
-		#region User interaction
+        #region User interaction
 
-		/// <summary>
-		/// toggle connection status
-		/// </summary>
-		private void textBox1_Click(object sender, MouseEventArgs e)
+        /// <summary>
+        /// 切换连接状态
+        /// </summary>
+        private void textBox1_Click(object sender, MouseEventArgs e)
 		{
 			CommPort com = CommPort.Instance;
-			if (com.IsOpen)
+            if (com.IsOpen)
 			{
 				com.Close();
 			}
@@ -489,19 +495,19 @@ namespace sf
 			outputList.Focus();
 		}
 
-		/// <summary>
-		/// Change filter
-		/// </summary>
-		private void textBox2_TextChanged(object sender, EventArgs e)
+        /// <summary>
+        /// 改变滤波器
+        /// </summary>
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
             filterString = textBox2.Text;
 			outputList_Refresh();
 		}
 
-		/// <summary>
-		/// Show settings dialog
-		/// </summary>
-		private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 显示设置对话框
+        /// </summary>
+        private void button1_Click(object sender, EventArgs e)
 		{
 			TopMost = false;
 
@@ -512,18 +518,23 @@ namespace sf
 			Font = Settings.Option.MonoFont ? monoFont : origFont;
 		}
 
-		/// <summary>
-		/// Clear the output window
-		/// </summary>
-		private void button2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 清除输出窗口
+        /// </summary>
+        private void button2_Click(object sender, EventArgs e)
 		{
 			outputList_ClearAll();
 		}
-
-		/// <summary>
-		/// Show about dialog
-		/// </summary>
-		private void button3_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 波形控件调用，形成实时曲线
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+       
+        /// <summary>
+        /// 显示软件相关信息
+        /// </summary>
+        private void button3_Click(object sender, EventArgs e)
 		{
 			TopMost = false;
 
@@ -534,7 +545,7 @@ namespace sf
 		}
 
 		/// <summary>
-		/// Close the application
+		/// 关闭软件
 		/// </summary>
 		private void button4_Click(object sender, EventArgs e)
 		{
@@ -542,7 +553,7 @@ namespace sf
 		}
 
         /// <summary>
-        /// If character 0-9 a-f A-F, then return hex digit value ?
+        /// 如果输入是 0-9 a-f A-F, 然后返回十六进制数字值 ?
         /// </summary>
         private static int GetHexDigit(char c)
         {
@@ -564,7 +575,7 @@ namespace sf
         };
 
         /// <summary>
-        /// Convert escape sequences
+        /// 转义序列
         /// </summary>
         private string ConvertEscapeSequences(string s)
         {
@@ -615,7 +626,7 @@ namespace sf
         }
 
 		/// <summary>
-		/// Send command
+		/// 发送命令
 		/// </summary>
 		private void button5_Click(object sender, EventArgs e)
         {
@@ -639,7 +650,7 @@ namespace sf
         }
 
 		/// <summary>
-		/// send file to serial port
+		/// 向端口发送文件
 		/// </summary>
 		private void button6_Click(object sender, EventArgs e)
 		{
@@ -679,7 +690,66 @@ namespace sf
             TopMost = Settings.Option.StayOnTop;
             Font = Settings.Option.MonoFont ? monoFont : origFont;
         }
+        //  form 'Resize'  的事件相应方法
+
+       
+
+        // Load事件的相应函数
+           /*   private void Form1_Load(object sender, EventArgs e)
+              {
+                  // 装载图像 
+                  CreateGraph(zGraph1);
+
+                  //设定控件的大小填充form 
+                  SetSize();
+              }
+
+              private void CreateGraph(ZGraph zGraph1)
+              {
+                  throw new NotImplementedException();
+              }
+
+              // 创建图像
+               private void CreateGraph(ZGraph zgc)
+               {
+
+                   //得到GraphPane的引用
+                   GraphPane myPane = zgc.GraphPane;
+
+                   // 设置标题 
+                   myPane.Title.Text = "My Test Graph\n(For CodeProject Sample)";
+                   myPane.XAxis.Title.Text = "My X Axis";
+                   myPane.YAxis.Title.Text = "My Y Axis";
+                   //生成正弦函数的数据集合 
+                   double x, y1, y2;
+                   PointPairList list1 = new PointPairList();
+                   PointPairList list2 = new PointPairList();
+                   for (int i = 0; i < 36; i++)
+                   {
+                       x = (double)i + 5;
+                       y1 = 1.5 + Math.Sin((double)i * 0.2);
+                       y2 = 3.0 * (1.5 + Math.Sin((double)i * 0.2));
+                       list1.Add(x, y1);
+                       list2.Add(x, y2);
+                   }
+                   //用钻石符合形状生成红色的曲线和图例
+                   LineItem myCurve = myPane.AddCurve("Porsche",
+                               list1, Color.Red, SymbolType.Diamond);
+                   //利用圆型的符号生成蓝色的曲线和图例
+                   LineItem myCurve2 = myPane.AddCurve("Piper",
+                               list2, Color.Blue, SymbolType.Circle);
+                   //告诉ZedGraph 去重新描绘坐标轴当数据变化时
+                   zgc.AxisChange();
+               }*/
 
         #endregion
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        
     }
 }
