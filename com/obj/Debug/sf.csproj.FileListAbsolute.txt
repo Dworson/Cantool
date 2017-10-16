@@ -25,3 +25,4 @@ F:\Cantool\com\bin\Debug\Nobi.StatusChart.dll
 F:\Cantool\com\bin\Debug\Nobi.StatusChart.pdb
 F:\Cantool\com\bin\Debug\ZGraph.dll
 F:\Cantool\com\bin\Debug\ZGraph.xml
+F:\Cantool\com\obj\Debug\sf.Form4.resources
