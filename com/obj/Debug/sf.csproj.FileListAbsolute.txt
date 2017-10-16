@@ -1,0 +1,27 @@
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\Termie.AboutBox.resources
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.csproj.GenerateResource.Cache
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.Form1.resources
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.Properties.Resources.resources
+F:\cantool\c#编写串口通讯代码 多线程实现\bin\Debug\sf.exe
+F:\cantool\c#编写串口通讯代码 多线程实现\bin\Debug\sf.pdb
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.exe
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.pdb
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.Form2.resources
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.csprojResolveAssemblyReference.cache
+F:\Cantool\com\obj\Debug\sf.exe
+F:\Cantool\com\obj\Debug\sf.pdb
+F:\Cantool\com\bin\Debug\sf.exe
+F:\Cantool\com\bin\Debug\sf.pdb
+F:\Cantool\com\obj\Debug\sf.csprojResolveAssemblyReference.cache
+F:\Cantool\com\obj\Debug\Termie.AboutBox.resources
+F:\Cantool\com\obj\Debug\sf.Form1.resources
+F:\Cantool\com\obj\Debug\sf.Form2.resources
+F:\Cantool\com\obj\Debug\sf.Properties.Resources.resources
+F:\Cantool\com\obj\Debug\sf.csproj.GenerateResource.Cache
+F:\Cantool\com\obj\Debug\sf.Form3.resources
+L:\com\obj\Debug\sf.exe
+L:\com\obj\Debug\sf.pdb
+F:\Cantool\com\bin\Debug\Nobi.StatusChart.dll
+F:\Cantool\com\bin\Debug\Nobi.StatusChart.pdb
+F:\Cantool\com\bin\Debug\ZGraph.dll
+F:\Cantool\com\bin\Debug\ZGraph.xml
