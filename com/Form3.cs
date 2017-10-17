@@ -4,16 +4,17 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Windows.Media;
 using System.Drawing;
+using System.Threading;
 
 namespace sf
 {
     public partial class Form3 : Form
     {
         ArrayList lines = new ArrayList();
-
+        //SetStyle(ControlStyles.DoubleBuffer | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
         public CommPort.EventHandler OnStatusChanged { get; private set; }
         public CommPort.EventHandler OnDataReceived { get; private set; }
-
+     
         public Form3()
         {
             InitializeComponent();
@@ -29,22 +30,60 @@ namespace sf
         public List<float> x4 = new List<float>();
         public List<float> y4 = new List<float>();
         #endregion
+        private List<List<float>> dataSource;
+        /// <summary>
+        /// 数据源
+        /// </summary>
+       public List<List<float>> DataSource
+        {
+            get { return dataSource; }
+            set
+            {
+                if (value != null)
+                {
+                    try
+                    {
 
+                        bool isEqualed = true;
+                        int count = value[0].Count;
+                        value.ForEach(x =>
+                        {
+                            if (x.Count != count)
+                                isEqualed = false;
+                        });
+                        if (isEqualed)
+                        {
+                            dataSource = value; Invalidate();
+                        }
+                        else
+                        {
+                            throw new Exception("数据源中集合的长度必须相等");
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+                }
+
+            }
+        }
+        private List<string> xElements = new List<string>() { "元素1", "元素2", "元素3", "元素4", "元素5", "元素6", "元素7", "元素8", "元素9", "元素10" };
         private void zGraph1_Load(object sender, EventArgs e)
         {
+          
             CommPort com = CommPort.Instance;
-            com.StatusChanged += OnStatusChanged;
-            com.DataReceived += OnDataReceived;
-            com.Open();
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            
+           // com.StatusChanged += OnStatusChanged;
+            //com.DataReceived += OnDataReceived;
+            //com.Open();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int Originx = 0;
+            //Point originPoit = new Point(Originx,zGraph1.Height - 30);
+            //zGraph1.Transform = new Matrix(1, 0, 0, -1, Origin.X, Origin.Y);
             ///串口采样显示[周期k]
             button1.Enabled = false;
             this.Focus();
@@ -101,7 +140,7 @@ namespace sf
             button1.Text += ".";
             if (button1.Text.Length > 22)
             {
-                button1.Text = "串口采样正在采样.";
+                button1.Text = "正在采样.";
             }
         }
         private void f_timerDrawStart()
@@ -114,6 +153,7 @@ namespace sf
         }
         private void f_timerDrawStop()
         {
+      
             timerDraw.Stop();
             textBox1.ReadOnly = false;
             textBox1.ReadOnly = false;
@@ -121,5 +161,6 @@ namespace sf
             button1.Text = "串口采样";
             button1.TextAlign = ContentAlignment.MiddleCenter;
         }
+        
     }
 }
