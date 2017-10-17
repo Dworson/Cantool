@@ -1,0 +1,57 @@
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\Termie.AboutBox.resources
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.csproj.GenerateResource.Cache
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.Form1.resources
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.Properties.Resources.resources
+F:\cantool\c#编写串口通讯代码 多线程实现\bin\Debug\sf.exe
+F:\cantool\c#编写串口通讯代码 多线程实现\bin\Debug\sf.pdb
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.exe
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.pdb
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.Form2.resources
+F:\cantool\c#编写串口通讯代码 多线程实现\obj\Debug\sf.csprojResolveAssemblyReference.cache
+F:\Cantool\com\obj\Debug\sf.exe
+F:\Cantool\com\obj\Debug\sf.pdb
+F:\Cantool\com\bin\Debug\sf.exe
+F:\Cantool\com\bin\Debug\sf.pdb
+F:\Cantool\com\obj\Debug\sf.csprojResolveAssemblyReference.cache
+F:\Cantool\com\obj\Debug\Termie.AboutBox.resources
+F:\Cantool\com\obj\Debug\sf.Form1.resources
+F:\Cantool\com\obj\Debug\sf.Form2.resources
+F:\Cantool\com\obj\Debug\sf.Properties.Resources.resources
+F:\Cantool\com\obj\Debug\sf.csproj.GenerateResource.Cache
+F:\Cantool\com\obj\Debug\sf.Form3.resources
+L:\com\obj\Debug\sf.exe
+L:\com\obj\Debug\sf.pdb
+F:\Cantool\com\bin\Debug\Nobi.StatusChart.dll
+F:\Cantool\com\bin\Debug\Nobi.StatusChart.pdb
+F:\Cantool\com\bin\Debug\ZGraph.dll
+F:\Cantool\com\bin\Debug\ZGraph.xml
+C:\homework\Cantool\com\obj\Debug\sf.exe
+C:\homework\Cantool\com\obj\Debug\sf.pdb
+C:\homework\Cantool\com - 副本\obj\Debug\sf.exe
+C:\homework\Cantool\com - 副本\obj\Debug\sf.pdb
+C:\homework\Cantool\com - 副本\bin\Debug\sf.exe
+C:\homework\Cantool\com - 副本\bin\Debug\sf.pdb
+C:\homework\Cantool\com - 副本\bin\Debug\Nobi.StatusChart.pdb
+C:\homework\Cantool\com - 副本\bin\Debug\ZGraph.xml
+C:\homework\Cantool\com - 副本\obj\Debug\sf.csprojResolveAssemblyReference.cache
+C:\homework\Cantool\com - 副本\obj\Debug\Termie.AboutBox.resources
+C:\homework\Cantool\com - 副本\obj\Debug\sf.Form1.resources
+C:\homework\Cantool\com - 副本\obj\Debug\sf.Form2.resources
+C:\homework\Cantool\com - 副本\obj\Debug\sf.Form3.resources
+C:\homework\Cantool\com - 副本\obj\Debug\sf.Properties.Resources.resources
+C:\homework\Cantool\com - 副本\obj\Debug\sf.csproj.GenerateResource.Cache
+C:\homework\Cantool\com - wb\obj\Debug\sf.exe
+C:\homework\Cantool\com - wb\obj\Debug\sf.pdb
+C:\homework\Cantool\com - wb\bin\Debug\sf.exe
+C:\homework\Cantool\com - wb\bin\Debug\sf.pdb
+C:\homework\Cantool\com - wb\bin\Debug\Nobi.StatusChart.pdb
+C:\homework\Cantool\com - wb\bin\Debug\ZGraph.xml
+C:\homework\Cantool\com - wb\obj\Debug\sf.csprojResolveAssemblyReference.cache
+C:\homework\Cantool\com - wb\obj\Debug\Termie.AboutBox.resources
+C:\homework\Cantool\com - wb\obj\Debug\sf.Form1.resources
+C:\homework\Cantool\com - wb\obj\Debug\sf.Form2.resources
+C:\homework\Cantool\com - wb\obj\Debug\sf.Form3.resources
+C:\homework\Cantool\com - wb\obj\Debug\sf.Properties.Resources.resources
+C:\homework\Cantool\com - wb\obj\Debug\sf.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\com - wb\obj\Debug\sf.exe
+C:\Users\Administrator\Desktop\com - wb\obj\Debug\sf.pdb
