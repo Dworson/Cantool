@@ -165,11 +165,35 @@ namespace sf
 
                 sr.Close();
                 fs.Close();
+
+                Settings.Port.PortName = comboBox1.Text;
+                Settings.Port.BaudRate = Int32.Parse(comboBox2.Text);
+                Settings.Port.DataBits = comboBox3.SelectedIndex + 5;
+                Settings.Port.Parity = (Parity)comboBox4.SelectedIndex;
+                Settings.Port.StopBits = (StopBits)comboBox5.SelectedIndex;
+                Settings.Port.Handshake = (Handshake)comboBox6.SelectedIndex;
+
+                if (radioButton2.Checked)
+                    Settings.Option.AppendToSend = Settings.Option.AppendType.AppendCR;
+                else if (radioButton3.Checked)
+                    Settings.Option.AppendToSend = Settings.Option.AppendType.AppendLF;
+                else if (radioButton4.Checked)
+                    Settings.Option.AppendToSend = Settings.Option.AppendType.AppendCRLF;
+                else
+                    Settings.Option.AppendToSend = Settings.Option.AppendType.AppendNothing;
+
+                Settings.Option.HexOutput = checkBox1.Checked;
+                Settings.Option.MonoFont = checkBox2.Checked;
+                Settings.Option.LocalEcho = checkBox3.Checked;
+                Settings.Option.StayOnTop = checkBox4.Checked;
+                Settings.Option.FilterUseCase = checkBox5.Checked;
+
+                CommPort com = CommPort.Instance;
+                com.Open();
+
+                Settings.Write();
 			}
-            else
-            {
-				
-            }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
