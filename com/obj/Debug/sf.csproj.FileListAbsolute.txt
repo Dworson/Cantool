@@ -26,3 +26,13 @@ F:\Cantool\com\bin\Debug\Nobi.StatusChart.pdb
 F:\Cantool\com\bin\Debug\ZGraph.dll
 F:\Cantool\com\bin\Debug\ZGraph.xml
 F:\Cantool\com\obj\Debug\sf.Form4.resources
+F:\Cantool\com\bin\Debug\Interop.iPlotLibrary.dll
+F:\Cantool\com\bin\Debug\Interop.iProfessionalLibrary.dll
+F:\Cantool\com\bin\Debug\AxInterop.iPlotLibrary.dll
+F:\Cantool\com\bin\Debug\AxInterop.iProfessionalLibrary.dll
+F:\Cantool\com\obj\Debug\Interop.iPlotLibrary.dll
+F:\Cantool\com\obj\Debug\Interop.iProfessionalLibrary.dll
+F:\Cantool\com\obj\Debug\AxInterop.iPlotLibrary.dll
+F:\Cantool\com\obj\Debug\AxInterop.iProfessionalLibrary.dll
+F:\Cantool\com\obj\Debug\sf.csproj.ResolveComReference.cache
+F:\Cantool\com\bin\Debug\sf.exe.config
