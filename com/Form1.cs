@@ -5,13 +5,14 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Termie;
+using System.IO.Ports;
 
 namespace sf
 {
     public partial class Form1 : Form
     {
-		/// <summary>
-		/// Class to keep track of string and color for lines in output window.
+        /// <summary>
+        /// 在输出窗口中跟踪字符串和颜色的类。
 		/// </summary>
 		private class Line
 		{
@@ -47,7 +48,7 @@ namespace sf
 			Settings.Read();
             TopMost = Settings.Option.StayOnTop;
 
-			// let form use multiple fonts
+            // 让表单使用多种字体
             origFont = Font;
             FontFamily ff = new FontFamily("Courier New");
             monoFont = new Font(ff, 8, FontStyle.Regular);
@@ -94,17 +95,17 @@ namespace sf
 		Color receivedColor = Color.Green;
 		Color sentColor = Color.Blue;
 
-		/// <summary>
-		/// context menu for the output window
-		/// </summary>
-		ContextMenu popUpMenu;
+        /// <summary>
+        ///输出窗口的上下文菜单
+        /// </summary>
+        ContextMenu popUpMenu;
 
-		/// <summary>
-		/// check to see if filter matches string
-		/// </summary>
-		/// <param name="s">string to check</param>
-		/// <returns>true if matches filter</returns>
-		bool outputList_ApplyFilter(String s)
+        /// <summary>
+        /// 检查过滤器是否匹配字符串
+        /// </summary>
+        /// <param name="s">string to check</param>
+        /// <returns>如果匹配过滤器为true</returns>
+        bool outputList_ApplyFilter(String s)
 		{
 			if (filterString == "")
 			{
@@ -127,7 +128,7 @@ namespace sf
 		}
 
 		/// <summary>
-		/// clear the output window
+		/// 清除输出框
 		/// </summary>
 		void outputList_ClearAll()
 		{
@@ -138,7 +139,7 @@ namespace sf
 		}
 
 		/// <summary>
-		/// refresh the output window
+		/// 刷新输出框
 		/// </summary>
 		void outputList_Refresh()
 		{
@@ -155,10 +156,10 @@ namespace sf
 			outputList_Scroll();
 		}
 
-		/// <summary>
-		/// add a new line to output window
-		/// </summary>
-		Line outputList_Add(string str, Color color)
+        /// <summary>
+        /// 在输出窗口中添加一行
+        /// </summary>
+        Line outputList_Add(string str, Color color)
 		{
 			Line newLine = new Line(str, color);
 			lines.Add(newLine);
@@ -172,16 +173,16 @@ namespace sf
 			return newLine;
 		}
 
-		/// <summary>
-		/// Update a line in the output window.
-		/// </summary>
-		/// <param name="line">line to update</param>
-		void outputList_Update(Line line)
+        /// <summary>
+        /// 更新输出窗口中的一行
+        /// </summary>
+        /// <param name="line">line to update</param>
+        void outputList_Update(Line line)
 		{
-			// should we add to output?
-			if (outputList_ApplyFilter(line.Str))
+            // 我们应该添加到输出吗？
+            if (outputList_ApplyFilter(line.Str))
 			{
-				// is the line already displayed?
+                // 是已经显示的行吗？
 				bool found = false;
 				for (int i = 0; i < outputList.Items.Count; ++i)
 				{
@@ -211,17 +212,17 @@ namespace sf
 		}
 
 		/// <summary>
-		/// Initialize the output window
+		/// 初始化输出框
 		/// </summary>
 		private void outputList_Initialize()
 		{
-			// owner draw for listbox so we can add color
-			outputList.DrawMode = DrawMode.OwnerDrawFixed;
+            // 所有者为列表框绘制，所以我们可以添加颜色
+            outputList.DrawMode = DrawMode.OwnerDrawFixed;
 			outputList.DrawItem += new DrawItemEventHandler(outputList_DrawItem);
 			outputList.ClearSelected();
 
-			// build the outputList context menu
-			popUpMenu = new ContextMenu();
+            // 构建outputList上下文菜单
+                        popUpMenu = new ContextMenu();
 			popUpMenu.MenuItems.Add("&Copy", new EventHandler(outputList_Copy));
 			popUpMenu.MenuItems[0].Visible = true;
 			popUpMenu.MenuItems[0].Enabled = false;
@@ -238,22 +239,23 @@ namespace sf
 			outputList.ContextMenu = popUpMenu;
 		}
 
-		/// <summary>
-		/// draw item with color in output window
-		/// </summary>
-		void outputList_DrawItem(object sender, DrawItemEventArgs e)
+        /// <summary>
+        /// 在输出窗口中绘制颜色
+        /// </summary>
+        void outputList_DrawItem(object sender, DrawItemEventArgs e)
 		{
 			e.DrawBackground();
 			if (e.Index >= 0 && e.Index < outputList.Items.Count)
 			{
 				Line line = (Line)outputList.Items[e.Index];
 
-				// if selected, make the text color readable
-				Color color = line.ForeColor;
+                // 如果选择，使文本颜色可读
+                                Color color = line.ForeColor;
 				if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
 				{
-					color = Color.Black;	// make it readable
-				}
+					color = Color.Black;    // 使其可读
+
+                }
 
 				e.Graphics.DrawString(line.Str, e.Font, new SolidBrush(color),
 					e.Bounds, StringFormat.GenericDefault);
@@ -261,10 +263,10 @@ namespace sf
 			e.DrawFocusRectangle();
 		}
 
-		/// <summary>
-		/// Scroll to bottom of output window
-		/// </summary>
-		void outputList_Scroll()
+        /// <summary>
+        /// 滚动到输出窗口的底部
+        /// </summary>
+        void outputList_Scroll()
 		{
 			if (scrolling)
 			{
@@ -273,18 +275,18 @@ namespace sf
 			}
 		}
 
-		/// <summary>
-		/// Enable/Disable copy selection in output window
-		/// </summary>
-		private void outputList_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// 在输出窗口中启用/禁用复制选择
+        /// </summary>
+        private void outputList_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			popUpMenu.MenuItems[0].Enabled = (outputList.SelectedItems.Count > 0);
 		}
 
-		/// <summary>
-		/// copy selection in output window to clipboard
-		/// </summary>
-		private void outputList_Copy(object sender, EventArgs e)
+        /// <summary>
+        /// 将输出窗口中的选择复制到剪贴板
+        /// </summary>
+        private void outputList_Copy(object sender, EventArgs e)
 		{
 			int iCount = outputList.SelectedItems.Count;
 			if (iCount > 0)
@@ -300,10 +302,10 @@ namespace sf
 			}
 		}
 
-		/// <summary>
-		/// copy all lines in output window
-		/// </summary>
-		private void outputList_CopyAll(object sender, EventArgs e)
+        /// <summary>
+        /// 复制输出窗口中的所有行
+        /// </summary>
+        private void outputList_CopyAll(object sender, EventArgs e)
 		{
 			int iCount = outputList.Items.Count;
 			if (iCount > 0)
@@ -319,10 +321,10 @@ namespace sf
 			}
 		}
 
-		/// <summary>
-		/// select all lines in output window
-		/// </summary>
-		private void outputList_SelectAll(object sender, EventArgs e)
+        /// <summary>
+        /// 选择输出窗口中的所有行
+        /// </summary>
+        private void outputList_SelectAll(object sender, EventArgs e)
 		{
 			outputList.BeginUpdate();
 			for (int i = 0; i < outputList.Items.Count; ++i)
@@ -333,7 +335,7 @@ namespace sf
 		}
 
 		/// <summary>
-		/// clear selected in output window
+		/// 清除被选择的行
 		/// </summary>
 		private void outputList_ClearSelected(object sender, EventArgs e)
 		{
@@ -341,16 +343,16 @@ namespace sf
 			outputList.SelectedItem = -1;
 		}
 
-		#endregion
+        #endregion
 
-		#region Event handling - data received and status changed
+        #region Event handling - data received and status changed
 
-		/// <summary>
-		/// Prepare a string for output by converting non-printable characters.
-		/// </summary>
-		/// <param name="StringIn">input string to prepare.</param>
-		/// <returns>output string.</returns>
-		private String PrepareData(String StringIn)
+        /// <summary>
+        /// 通过转换不可打印的字符来准备输出的字符串。
+        /// </summary>
+        /// <param name="StringIn">input string to prepare.</param>
+        /// <returns>output string.</returns>
+        private String PrepareData(String StringIn)
 		{
 			// The names of the first 32 characters
 			string[] charNames = { "NUL", "SOH", "STX", "ETX", "EOT",
@@ -381,15 +383,15 @@ namespace sf
 			return StringOut;
 		}
 
-		/// <summary>
-		/// Partial line for AddData().
-		/// </summary>
-		private Line partialLine = null;
+        /// <summary>
+        /// AddData（）的部分行。
+        /// </summary>
+        private Line partialLine = null;
 
         public object SymbolType { get; private set; }
 
         /// <summary>
-        /// Add data to the output.
+        /// 将数据添加到输出。
         /// </summary>
         /// <param name="StringIn"></param>
         /// <returns></returns>
@@ -409,13 +411,13 @@ namespace sf
 			return outputList_Add(StringOut, receivedColor);
 		}
 
-		// delegate used for Invoke
-		internal delegate void StringDelegate(string data);
+        // 委托用于Invoke
+        internal delegate void StringDelegate(string data);
 
-		/// <summary>
-		/// Handle data received event from serial port.
+        /// <summary>
+        ///  处理来自串行端口的数据接收事件。
 		/// </summary>
-		/// <param name="data">incoming data</param>
+		/// <param name="data">传入数据</param>
 		public void OnDataReceived(string dataIn)
         {
             //Handle multi-threading
@@ -425,11 +427,11 @@ namespace sf
                 return;
             }
 
-			// pause scrolling to speed up output of multiple lines
-			bool saveScrolling = scrolling;
+            // 暂停滚动以加快多行输出
+            bool saveScrolling = scrolling;
 			scrolling = false;
 
-            // if we detect a line terminator, add line to output
+            // 如果我们检测到一个行终止符，将行添加到输出
             int index;
 			while (dataIn.Length > 0 &&
 				((index = dataIn.IndexOf("\r")) != -1 ||
@@ -439,11 +441,12 @@ namespace sf
 				dataIn = dataIn.Remove(0, index + 1);
 
 				logFile_writeLine(AddData(StringIn).Str);
-				partialLine = null;	// terminate partial line
+				partialLine = null; // 终止部分行
             }
 
-			// if we have data remaining, add a partial line
-			if (dataIn.Length > 0)
+            // 如果我们有剩余的数据，添加部分行
+
+            if (dataIn.Length > 0)
 			{
 				partialLine = AddData(dataIn);
 			}
@@ -453,13 +456,14 @@ namespace sf
 			outputList_Scroll();
 		}
 
-		/// <summary>
-		/// Update the connection status
-		/// </summary>
-		public void OnStatusChanged(string status)
+        /// <summary>
+        /// 更新连接状态
+        /// </summary>
+        public void OnStatusChanged(string status)
 		{
-			//Handle multi-threading
-			if (InvokeRequired)
+            // 处理多线程
+
+            if (InvokeRequired)
 			{
 				Invoke(new StringDelegate(OnStatusChanged), new object[] { status });
 				return;
@@ -487,7 +491,8 @@ namespace sf
 				com.Open();
 			}
 			outputList.Focus();
-		}
+           
+        }
 
         /// <summary>
         /// 改变滤波器
@@ -519,12 +524,6 @@ namespace sf
 		{
 			outputList_ClearAll();
 		}
-        /// <summary>
-        /// 波形控件调用，形成实时曲线
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-       
         /// <summary>
         /// 显示软件相关信息
         /// </summary>
@@ -558,7 +557,7 @@ namespace sf
         }
 
         /// <summary>
-        /// Parse states for ConvertEscapeSequences()
+        ///  ConvertEscapeSequences（）的解析状态
         /// </summary>
         public enum Expecting : byte
         {
@@ -706,6 +705,14 @@ namespace sf
           
         }
 
-        
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void axiXYPlotX1_OnClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.zGraph1 = new ZhengJuyin.UI.ZGraph();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.timerDraw = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // zGraph1
             // 
             this.zGraph1.BackColor = System.Drawing.Color.White;
             this.zGraph1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.zGraph1.Location = new System.Drawing.Point(9, 56);
+            this.zGraph1.Location = new System.Drawing.Point(9, 43);
             this.zGraph1.m_backColorH = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.zGraph1.m_backColorL = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.zGraph1.m_BigXYBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -80,18 +83,32 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "显示";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(164, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(155, 21);
+            this.textBox1.TabIndex = 2;
+            // 
+            // timerDraw
+            // 
+            this.timerDraw.Tick += new System.EventHandler(this.timerDraw_Tick);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 503);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.zGraph1);
             this.Name = "Form3";
-            this.Text = "波形现实";
+            this.Text = "波形显示";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -99,5 +116,7 @@
 
         private ZhengJuyin.UI.ZGraph zGraph1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Timer timerDraw;
     }
 }
