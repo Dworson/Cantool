@@ -74,6 +74,7 @@
             this.zGraph1.Size = new System.Drawing.Size(686, 438);
             this.zGraph1.TabIndex = 0;
             this.zGraph1.Load += new System.EventHandler(this.zGraph1_Load);
+            this.zGraph1.ImeModeChanged += new System.EventHandler(this.zGraph1_Load);
             // 
             // button1
             // 
@@ -106,7 +107,7 @@
             this.Controls.Add(this.zGraph1);
             this.Name = "Form3";
             this.Text = "波形显示";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.Load += new System.EventHandler(this.zGraph1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
