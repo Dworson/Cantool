@@ -1,17 +1,10 @@
 using System;
 using System.IO;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Termie;
-using System.Management.Instrumentation;
-using System.IO.Ports;
-using UI;
-using ZhengJuyin.UI;
 
 namespace sf
 {
@@ -47,6 +40,7 @@ namespace sf
             AcceptButton = button5; //Send
             CancelButton = button4; //Close
             button8.Click += new EventHandler(button8_Click);
+            button9.Click += new EventHandler(button9_Click);
 
             outputList_Initialize();
 
@@ -690,57 +684,19 @@ namespace sf
             TopMost = Settings.Option.StayOnTop;
             Font = Settings.Option.MonoFont ? monoFont : origFont;
         }
-        //  form 'Resize'  的事件相应方法
 
-       
+        private void button9_Click(object sender, EventArgs e)
+        {
+            TopMost = false;
 
-        // Load事件的相应函数
-           /*   private void Form1_Load(object sender, EventArgs e)
-              {
-                  // 装载图像 
-                  CreateGraph(zGraph1);
+            Form4 form4 = new Form4();
+            form4.ShowDialog();
 
-                  //设定控件的大小填充form 
-                  SetSize();
-              }
+            TopMost = Settings.Option.StayOnTop;
+            Font = Settings.Option.MonoFont ? monoFont : origFont;
+        }
 
-              private void CreateGraph(ZGraph zGraph1)
-              {
-                  throw new NotImplementedException();
-              }
 
-              // 创建图像
-               private void CreateGraph(ZGraph zgc)
-               {
-
-                   //得到GraphPane的引用
-                   GraphPane myPane = zgc.GraphPane;
-
-                   // 设置标题 
-                   myPane.Title.Text = "My Test Graph\n(For CodeProject Sample)";
-                   myPane.XAxis.Title.Text = "My X Axis";
-                   myPane.YAxis.Title.Text = "My Y Axis";
-                   //生成正弦函数的数据集合 
-                   double x, y1, y2;
-                   PointPairList list1 = new PointPairList();
-                   PointPairList list2 = new PointPairList();
-                   for (int i = 0; i < 36; i++)
-                   {
-                       x = (double)i + 5;
-                       y1 = 1.5 + Math.Sin((double)i * 0.2);
-                       y2 = 3.0 * (1.5 + Math.Sin((double)i * 0.2));
-                       list1.Add(x, y1);
-                       list2.Add(x, y2);
-                   }
-                   //用钻石符合形状生成红色的曲线和图例
-                   LineItem myCurve = myPane.AddCurve("Porsche",
-                               list1, Color.Red, SymbolType.Diamond);
-                   //利用圆型的符号生成蓝色的曲线和图例
-                   LineItem myCurve2 = myPane.AddCurve("Piper",
-                               list2, Color.Blue, SymbolType.Circle);
-                   //告诉ZedGraph 去重新描绘坐标轴当数据变化时
-                   zgc.AxisChange();
-               }*/
 
         #endregion
 

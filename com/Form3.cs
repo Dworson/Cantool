@@ -26,9 +26,15 @@ namespace sf
             InitializeComponent();
         }
 
-        private void zGraph1_Load(object sender, EventArgs e)
+       
+       private void zGraph1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
