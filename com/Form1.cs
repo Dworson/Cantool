@@ -42,6 +42,7 @@ namespace sf
             CancelButton = button4; //Close
             button8.Click += new EventHandler(button8_Click);
             button9.Click += new EventHandler(button9_Click);
+            button10.Click += new EventHandler(button10_Click);
 
             outputList_Initialize();
 
@@ -512,8 +513,11 @@ namespace sf
 
 			Form2 form2 = new Form2();
 			form2.ShowDialog();
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
 
-			TopMost = Settings.Option.StayOnTop;
+
+            TopMost = Settings.Option.StayOnTop;
 			Font = Settings.Option.MonoFont ? monoFont : origFont;
 		}
 
@@ -695,6 +699,17 @@ namespace sf
             Font = Settings.Option.MonoFont ? monoFont : origFont;
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            TopMost = false;
+
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
+
+            TopMost = Settings.Option.StayOnTop;
+            Font = Settings.Option.MonoFont ? monoFont : origFont;
+        }
+
 
 
         #endregion
@@ -711,6 +726,25 @@ namespace sf
         }
 
         private void axiXYPlotX1_OnClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void can–≈œ¢Ω‚Œˆ_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
