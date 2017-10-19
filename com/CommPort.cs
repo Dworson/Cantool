@@ -1,22 +1,20 @@
 using System;
 using System.IO;
 using System.IO.Ports;
-using System.Collections;
 using System.Threading;
-
 namespace sf
 {
-    /// <summary> CommPort class creates a singleton instance
+    /// <summary> CommPort类创建一个单例实例,关于SerialPort类
     /// of SerialPort (System.IO.Ports) </summary>
-    /// <remarks> When ready, you open the port.
+    /// <remarks> 准备好时，打开端口，端口代码如下。
     ///   <code>
     ///   CommPort com = CommPort.Instance;
     ///   com.StatusChanged += OnStatusChanged;
     ///   com.DataReceived += OnDataReceived;
     ///   com.Open();
     ///   </code>
-    ///   Notice that delegates are used to handle status and data events.
-    ///   When settings are changed, you close and reopen the port.
+    ///  请注意，代理用于处理状态和数据事件。
+    /// 更改设置时，关闭并重新打开端口。代码如下：
     ///   <code>
     ///   CommPort com = CommPort.Instance;
     ///   com.Close();
@@ -30,11 +28,11 @@ namespace sf
 		Thread _readThread;
 		volatile bool _keepReading;
 
-        //begin Singleton pattern
+        //开始Singleton模式
         static readonly CommPort instance = new CommPort();
 
-		// Explicit static constructor to tell C# compiler
-        // not to mark type as beforefieldinit
+        // 明确的静态构造函数来告诉C＃编译器
+        // 不要将类型标记为beforefieldinit
         static CommPort()
         {
         }
@@ -53,13 +51,13 @@ namespace sf
                 return instance;
             }
         }
-        //end Singleton pattern
+        //结束 Singleton 部分
 
-		//begin Observer pattern
+		//开始 Observer 部分
         public delegate void EventHandler(string param);
         public EventHandler StatusChanged;
         public EventHandler DataReceived;
-        //end Observer pattern
+        //结束 Observer 部分
 
 		private void StartReading()
 		{
@@ -67,7 +65,7 @@ namespace sf
 			{
 				_keepReading = true;
 				_readThread = new Thread(ReadPort);
-				_readThread.Start();
+                _readThread.Start();
 			}
 		}
 
@@ -76,12 +74,12 @@ namespace sf
 			if (_keepReading)
 			{
 				_keepReading = false;
-				_readThread.Join();	//block until exits
+				_readThread.Join();	//block until exits，阻止直到存在。
 				_readThread = null;
 			}
-		}
+        }
 
-		/// <summary> Get the data and pass it on. </summary>
+		/// <summary> 获取数据并传递 </summary>
 		private void ReadPort()
 		{
 			while (_keepReading)
@@ -91,15 +89,16 @@ namespace sf
 					byte[] readBuffer = new byte[_serialPort.ReadBufferSize + 1];
 					try
 					{
-						// If there are bytes available on the serial port,
-						// Read returns up to "count" bytes, but will not block (wait)
-						// for the remaining bytes. If there are no bytes available
-						// on the serial port, Read will block until at least one byte
-						// is available on the port, up until the ReadTimeout milliseconds
-						// have elapsed, at which time a TimeoutException will be thrown.
-						int count = _serialPort.Read(readBuffer, 0, _serialPort.ReadBufferSize);
+                        // 如果串行端口上有字节可用
+                        // 读取返回“计数”字节，但不会阻止（等待）
+                        // 对于剩余的字节。如果没有字节可用
+                        // 在串行端口上，读取将阻塞至少一个字节
+                        // 在端口上可用，直到ReadTimeout为止
+                        // 已经过去了，此时将抛出TimeoutException。
+                        int count = _serialPort.Read(readBuffer, 0, _serialPort.ReadBufferSize);
 						String SerialIn = System.Text.Encoding.ASCII.GetString(readBuffer,0,count);
 						DataReceived(SerialIn);
+
 					}
 					catch (TimeoutException) { }
 				}
@@ -111,7 +110,7 @@ namespace sf
 			}
 		}
 
-		/// <summary> Open the serial port with current settings. </summary>
+        /// <summary>使用当前设置打开串行端口。</summary>
         public void Open()
         {
 			Close();
@@ -125,13 +124,13 @@ namespace sf
                 _serialPort.StopBits = Settings.Port.StopBits;
                 _serialPort.Handshake = Settings.Port.Handshake;
 
-				// Set the read/write timeouts
-				_serialPort.ReadTimeout = 50;
+                // 设置读/写超时
+                _serialPort.ReadTimeout = 50;
 				_serialPort.WriteTimeout = 50;
 
 				_serialPort.Open();
 				StartReading();
-			}
+            }
             catch (IOException)
             {
                 StatusChanged(String.Format("{0} does not exist", Settings.Port.PortName));
@@ -145,10 +144,10 @@ namespace sf
                 StatusChanged(String.Format("{0}", ex.ToString()));
             }
 
-            // Update the status
+            // 更新状态
             if (_serialPort.IsOpen)
             {
-                string p = _serialPort.Parity.ToString().Substring(0, 1);   //First char
+                string p = _serialPort.Parity.ToString().Substring(0, 1);   //第一个字符
                 string h = _serialPort.Handshake.ToString();
                 if (_serialPort.Handshake == Handshake.None)
                     h = "打开"; // more descriptive than "None"
@@ -163,7 +162,8 @@ namespace sf
             }
         }
 
-        /// <summary> Close the serial port. </summary>
+
+        /// <summary> 关闭端口 </summary>
         public void Close()
         {
 			StopReading();
@@ -171,7 +171,7 @@ namespace sf
             StatusChanged("连接关闭");
         }
 
-        /// <summary> Get the status of the serial port. </summary>
+        /// <summary> 获得端口状态 </summary>
         public bool IsOpen
         {
             get
@@ -180,15 +180,15 @@ namespace sf
             }
         }
 
-        /// <summary> Get a list of the available ports. Already opened ports
+        /// <summary> 获取可用端口的列表。已经打开端口
         /// are not returend. </summary>
         public string[] GetAvailablePorts()
         {
             return SerialPort.GetPortNames();
         }
 
-        /// <summary>Send data to the serial port after appending line ending. </summary>
-        /// <param name="data">An string containing the data to send. </param>
+        /// <summary>在追加行结束后，将数据发送到串行端口。 </summary>
+        /// <param name="data">包含要发送的数据的字符串。 </param>
         public void Send(string data)
         {
             if (IsOpen)
@@ -207,5 +207,6 @@ namespace sf
                 _serialPort.Write(data + lineEnding);
             }
         }
+
     }
 }

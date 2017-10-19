@@ -32,9 +32,3 @@ E:\Wpf_用户控件\WpfApplication添加winform\WpfApplication\WpfControlLibrary
 E:\Wpf_用户控件\WpfApplication添加winform\WpfApplication\WpfControlLibrary\obj\x86\Debug\WpfControlLibrary.csproj.GenerateResource.Cache
 E:\Wpf_用户控件\WpfApplication添加winform\WpfApplication\WpfControlLibrary\obj\x86\Debug\WpfControlLibrary.dll
 E:\Wpf_用户控件\WpfApplication添加winform\WpfApplication\WpfControlLibrary\obj\x86\Debug\WpfControlLibrary.pdb
-C:\homework\Cantool\Wpf_用户控件\WpfApplication添加winform\WpfApplication\WpfControlLibrary\obj\x86\Debug\WpfControlLibrary.pdb
-C:\homework\Cantool\Wpf_用户控件\WpfApplication添加winform\WpfApplication\WpfControlLibrary\obj\x86\Debug\WpfControlLibrary.csprojResolveAssemblyReference.cache
-C:\homework\Cantool\Wpf_用户控件\WpfApplication添加winform\WpfApplication\WpfControlLibrary\obj\x86\Debug\UserCl.g.cs
-C:\homework\Cantool\Wpf_用户控件\WpfApplication添加winform\WpfApplication\WpfControlLibrary\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
-C:\homework\Cantool\Wpf_用户控件\WpfApplication添加winform\WpfApplication\WpfControlLibrary\obj\x86\Debug\WpfControlLibrary_MarkupCompile.cache
-C:\homework\Cantool\Wpf_用户控件\WpfApplication添加winform\WpfApplication\WpfControlLibrary\obj\x86\Debug\WpfControlLibrary_MarkupCompile.lref

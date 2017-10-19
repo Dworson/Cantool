@@ -1,14 +1,7 @@
 using System;
-using System.Diagnostics;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
-using sf;
 
 namespace sf
 {
@@ -43,7 +36,7 @@ namespace sf
                 if (baudRates[i] == Settings.Port.BaudRate)
                     found = i;
             }
-            comboBox2.SelectedIndex = 12;
+            comboBox2.SelectedIndex = found;
 
             comboBox3.Items.Add("5");
             comboBox3.Items.Add("6");
@@ -57,12 +50,11 @@ namespace sf
             }
             comboBox4.SelectedIndex = (int)Settings.Port.Parity;
 
-            //停止位选择项
-            comboBox5.Items.Add("0");
-            comboBox5.Items.Add("1");
-            comboBox5.Items.Add("1.5");
-            comboBox5.Items.Add("2");
-            comboBox5.SelectedIndex = 1;//默认为1      
+            foreach (string s in Enum.GetNames(typeof(StopBits)))
+            {
+                comboBox5.Items.Add(s);
+            }
+            comboBox5.SelectedIndex = (int)Settings.Port.StopBits;
 
             foreach (string s in Enum.GetNames(typeof(Handshake)))
             {

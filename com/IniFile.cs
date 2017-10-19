@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 /// <summary>
 /// Read/Write values to an ini file
 /// </summary>
+/// 将串口数据写入至ini文件中
 namespace sf
 {
     public class IniFile 
