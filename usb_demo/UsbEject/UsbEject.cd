@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="UsbEject.About" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>About.cs</FileName>
+      <HashCode>AAAAAAAAICACABAAAASAAAACAAAAAAAAAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UsbEject.MainForm" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MainForm.cs</FileName>
+      <HashCode>hgCAAAkABDAAFBAAAACAAEQCAggAQwAwIkYAVBAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UsbEject.Library.Device">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Library\Device.cs</FileName>
+      <HashCode>AEBAAAAAEAAiBAYECgIgQAARCAARAAAAAAERAAAAARA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="Device" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UsbEject.Library.DeviceClass">
+    <Position X="1.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Library\DeviceClass.cs</FileName>
+      <HashCode>GAAAAAAAACAAAAEAAgAAAAABQAAAAEAAABAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="CreateDevice" Hidden="true" />
+      <Method Name="DeviceClass" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="GetInfo" Hidden="true" />
+      <Method Name="GetProperty" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UsbEject.Library.DiskDeviceClass">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Library\DiskDeviceClass.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="DiskDeviceClass" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="UsbEject.Library.Native" Collapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Library\Native.cs</FileName>
+      <HashCode>ARUAAAgAIAgCAAAAJAQAiGgGRAwAAgAQAEIBgAAIAQQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UsbEject.Library.Volume">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Library\Volume.cs</FileName>
+      <HashCode>AAAAAAAAEAAAAARACBAAgAAQAAAAAAAYAAgAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="Volume" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="UsbEject.Library.Device" FixedToPoint="true">
+      <Path>
+        <Point X="1.25" Y="3.75" />
+        <Point X="1.25" Y="3.596" />
+        <Point X="4.25" Y="3.596" />
+        <Point X="4.25" Y="3.75" />
+      </Path>
+    </InheritanceLine>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UsbEject.Library.VolumeDeviceClass">
+    <Position X="2.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Library\VolumeDeviceClass.cs</FileName>
+      <HashCode>CAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="CreateDevice" Hidden="true" />
+      <Method Name="VolumeDeviceClass" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Enum Name="UsbEject.Library.DeviceCapabilities" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Library\DeviceCapabilities.cs</FileName>
+      <HashCode>AAAAABAgAAAACAAACAIAAAIAAAAAAAAAAAAAYBAAQBA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>
