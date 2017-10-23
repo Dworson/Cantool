@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using Termie;
 using System.IO.Ports;
+using myBlueCS;
 
 namespace sf
 {
@@ -534,11 +535,10 @@ namespace sf
         private void button3_Click(object sender, EventArgs e)
 		{
 			TopMost = false;
-
-			AboutBox about = new AboutBox();
-			about.ShowDialog();
-
-			TopMost = Settings.Option.StayOnTop;
+            Form6 form6 = new Form6();
+            form6.ShowDialog();
+            Font = Settings.Option.MonoFont ? monoFont : origFont;
+            TopMost = Settings.Option.StayOnTop;
 		}
 
 		/// <summary>
