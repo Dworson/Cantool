@@ -1,0 +1,8 @@
+C:\homework\Cantool\usb_demo\USB\bin\Debug\USB.exe
+C:\homework\Cantool\usb_demo\USB\bin\Debug\USB.pdb
+C:\homework\Cantool\usb_demo\USB\obj\Debug\USB.csprojResolveAssemblyReference.cache
+C:\homework\Cantool\usb_demo\USB\obj\Debug\USB.Form1.resources
+C:\homework\Cantool\usb_demo\USB\obj\Debug\USB.Properties.Resources.resources
+C:\homework\Cantool\usb_demo\USB\obj\Debug\USB.csproj.GenerateResource.Cache
+C:\homework\Cantool\usb_demo\USB\obj\Debug\USB.exe
+C:\homework\Cantool\usb_demo\USB\obj\Debug\USB.pdb

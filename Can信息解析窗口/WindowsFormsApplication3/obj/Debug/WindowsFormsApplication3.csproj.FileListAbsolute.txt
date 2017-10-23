@@ -7,3 +7,7 @@ c:\users\45214\documents\visual studio 2015\Projects\WindowsFormsApplication3\Wi
 c:\users\45214\documents\visual studio 2015\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache
 c:\users\45214\documents\visual studio 2015\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
 c:\users\45214\documents\visual studio 2015\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\homework\Cantool\Can信息解析窗口\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\homework\Cantool\Can信息解析窗口\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\homework\Cantool\Can信息解析窗口\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\homework\Cantool\Can信息解析窗口\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache

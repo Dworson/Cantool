@@ -1,0 +1,4 @@
+C:\homework\Cantool\blue_demo\myBlueCS\obj\Debug\myBlueCS.csprojResolveAssemblyReference.cache
+C:\homework\Cantool\blue_demo\myBlueCS\obj\Debug\myBlueCS.Form1.resources
+C:\homework\Cantool\blue_demo\myBlueCS\obj\Debug\myBlueCS.Properties.Resources.resources
+C:\homework\Cantool\blue_demo\myBlueCS\obj\Debug\myBlueCS.csproj.GenerateResource.Cache

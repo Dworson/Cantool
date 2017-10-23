@@ -1,0 +1,9 @@
+C:\homework\Cantool\usb_demo\UsbEject\bin\Debug\UsbEject.exe
+C:\homework\Cantool\usb_demo\UsbEject\bin\Debug\UsbEject.pdb
+C:\homework\Cantool\usb_demo\UsbEject\obj\Debug\UsbEject.csprojResolveAssemblyReference.cache
+C:\homework\Cantool\usb_demo\UsbEject\obj\Debug\UsbEject.About.resources
+C:\homework\Cantool\usb_demo\UsbEject\obj\Debug\UsbEject.Icons.resources
+C:\homework\Cantool\usb_demo\UsbEject\obj\Debug\UsbEject.MainForm.resources
+C:\homework\Cantool\usb_demo\UsbEject\obj\Debug\UsbEject.csproj.GenerateResource.Cache
+C:\homework\Cantool\usb_demo\UsbEject\obj\Debug\UsbEject.exe
+C:\homework\Cantool\usb_demo\UsbEject\obj\Debug\UsbEject.pdb
