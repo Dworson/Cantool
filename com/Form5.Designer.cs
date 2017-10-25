@@ -62,32 +62,32 @@
             // Time
             // 
             this.Time.Text = "Time";
-            this.Time.Width = 300;
+            this.Time.Width = 120;
             // 
             // Chn
             // 
             this.Chn.Text = "Chn";
-            this.Chn.Width = 30;
+            this.Chn.Width = 46;
             // 
             // ID
             // 
             this.ID.Text = "ID";
-            this.ID.Width = 120;
+            this.ID.Width = 76;
             // 
             // Name
             // 
             this.Name.Text = "Name";
-            this.Name.Width = 120;
+            this.Name.Width = 110;
             // 
             // Dir
             // 
             this.Dir.Text = "Dir";
-            this.Dir.Width = 30;
+            this.Dir.Width = 51;
             // 
             // Dlc
             // 
             this.Dlc.Text = "Dlc";
-            this.Dlc.Width = 30;
+            this.Dlc.Width = 47;
             // 
             // Date
             // 
@@ -100,7 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 363);
             this.Controls.Add(this.listView1);
-        
+            this.Name = "Form5";
             this.Text = "原始数据";
             this.ResumeLayout(false);
 

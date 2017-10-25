@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using Termie;
 using System.IO.Ports;
 using myBlueCS;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace sf
 {
@@ -35,6 +37,7 @@ namespace sf
 		public Form1()
         {
             InitializeComponent();
+
 
             splitContainer1.FixedPanel = FixedPanel.Panel1;
             splitContainer2.FixedPanel = FixedPanel.Panel2;
@@ -496,14 +499,6 @@ namespace sf
            
         }
 
-        /// <summary>
-        /// 改变滤波器
-        /// </summary>
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            filterString = textBox2.Text;
-			outputList_Refresh();
-		}
 
         /// <summary>
         /// 显示设置对话框
@@ -514,9 +509,6 @@ namespace sf
 
 			Form2 form2 = new Form2();
 			form2.ShowDialog();
-            Form5 form5 = new Form5();
-            form5.ShowDialog();
-
 
             TopMost = Settings.Option.StayOnTop;
 			Font = Settings.Option.MonoFont ? monoFont : origFont;
@@ -641,7 +633,7 @@ namespace sf
 
 				if (Settings.Option.LocalEcho)
 				{
-					outputList_Add(command + "\n", sentColor);
+					outputList_Add(command + "\r", sentColor);
 				}
             }
         }
@@ -682,8 +674,7 @@ namespace sf
             TopMost = false;
 
             Form3 form3 = new Form3();
-            form3.Show();
-
+            form3.ShowDialog();
             TopMost = Settings.Option.StayOnTop;
             Font = Settings.Option.MonoFont ? monoFont : origFont;
         }
@@ -715,38 +706,6 @@ namespace sf
         #endregion
 
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void button8_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void axiXYPlotX1_OnClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void can信息解析_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void button10_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

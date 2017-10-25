@@ -14,8 +14,8 @@ namespace sf
         /// <summary> Port settings. </summary>
         public class Port
         {
-            public static string PortName = "COM1";
-            public static int BaudRate = 115200;
+            public static string PortName = "COM4";
+            public static int BaudRate = 9600;
             public static int DataBits = 8;
             public static System.IO.Ports.Parity Parity = System.IO.Ports.Parity.None;
             public static System.IO.Ports.StopBits StopBits = System.IO.Ports.StopBits.One;
