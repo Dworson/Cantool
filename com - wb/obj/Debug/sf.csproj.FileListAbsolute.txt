@@ -53,37 +53,75 @@ E:\Program\Git\Cantool\Cantool\com\obj\Debug\sf.Form4.resources
 E:\Program\Git\Cantool\Cantool\com\obj\Debug\sf.Properties.Resources.resources
 E:\Program\Git\Cantool\Cantool\com\obj\Debug\sf.csproj.GenerateResource.Cache
 E:\Program\Git\Cantool\Cantool\com\obj\Debug\sf.Form5.resources
-F:\com\bin\Debug\sf.exe.config
-F:\com\obj\Debug\sf.csproj.ResolveComReference.cache
-F:\com\obj\Debug\sf.exe
-F:\com\obj\Debug\sf.pdb
-F:\com\obj\Debug\sf.csprojResolveAssemblyReference.cache
-F:\com\obj\Debug\Termie.AboutBox.resources
-F:\com\obj\Debug\sf.Form1.resources
-F:\com\obj\Debug\sf.Form2.resources
-F:\com\obj\Debug\sf.Form3.resources
-F:\com\obj\Debug\sf.Form4.resources
-F:\com\obj\Debug\sf.Form5.resources
-F:\com\obj\Debug\sf.Properties.Resources.resources
-F:\com\obj\Debug\sf.csproj.GenerateResource.Cache
-F:\com\bin\Debug\sf.exe
-F:\com\bin\Debug\sf.pdb
-F:\com\bin\Debug\Nobi.StatusChart.pdb
-F:\com\bin\Debug\ZGraph.xml
+E:\com-new\bin\Debug\sf.exe.config
+E:\com-new\obj\Debug\sf.csproj.ResolveComReference.cache
+E:\com-new\obj\Debug\sf.exe
+E:\com-new\obj\Debug\sf.pdb
+E:\com-new\bin\Debug\sf.exe
+E:\com-new\bin\Debug\sf.pdb
+E:\com-new\bin\Debug\Nobi.StatusChart.pdb
+E:\com-new\bin\Debug\ZGraph.xml
+E:\com-new\obj\Debug\sf.csprojResolveAssemblyReference.cache
+E:\com-new\obj\Debug\Termie.AboutBox.resources
+E:\com-new\obj\Debug\sf.Form1.resources
+E:\com-new\obj\Debug\sf.Form2.resources
+E:\com-new\obj\Debug\sf.Form3.resources
+E:\com-new\obj\Debug\sf.Form4.resources
+E:\com-new\obj\Debug\sf.Form5.resources
+E:\com-new\obj\Debug\sf.Properties.Resources.resources
+E:\com-new\obj\Debug\sf.csproj.GenerateResource.Cache
+E:\com-new0 - 副本\bin\Debug\sf.exe.config
+E:\com-new0 - 副本\obj\Debug\sf.csproj.ResolveComReference.cache
+E:\com-new0 - 副本\obj\Debug\sf.exe
+E:\com-new0 - 副本\obj\Debug\sf.pdb
+E:\com-new0 - 副本\obj\Debug\sf.csprojResolveAssemblyReference.cache
+E:\com-new0 - 副本\obj\Debug\Termie.AboutBox.resources
+E:\com-new0 - 副本\obj\Debug\sf.Form1.resources
+E:\com-new0 - 副本\obj\Debug\sf.Form2.resources
+E:\com-new0 - 副本\obj\Debug\sf.Form3.resources
+E:\com-new0 - 副本\obj\Debug\sf.Form4.resources
+E:\com-new0 - 副本\obj\Debug\sf.Form5.resources
+E:\com-new0 - 副本\obj\Debug\sf.Properties.Resources.resources
+E:\com-new0 - 副本\obj\Debug\sf.csproj.GenerateResource.Cache
+E:\com-new0 - 副本\bin\Debug\sf.exe
+E:\com-new0 - 副本\bin\Debug\sf.pdb
+E:\com-new0 - 副本\bin\Debug\Nobi.StatusChart.pdb
+E:\com-new0 - 副本\bin\Debug\ZGraph.xml
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\bin\Debug\sf.exe.config
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.csproj.ResolveComReference.cache
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.exe
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.pdb
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.csprojResolveAssemblyReference.cache
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\Termie.AboutBox.resources
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.Form1.resources
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.Form2.resources
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.Form3.resources
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.Form4.resources
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.Form5.resources
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.Properties.Resources.resources
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\obj\Debug\sf.csproj.GenerateResource.Cache
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\bin\Debug\sf.exe
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\bin\Debug\sf.pdb
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\bin\Debug\Nobi.StatusChart.pdb
+D:\GitHub\com-new0 - 副本\com-new0 - 副本\bin\Debug\ZGraph.xml
+C:\Users\Administrator\Desktop\com-new0 - 副本\bin\Debug\sf.exe.config
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.exe
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.pdb
+C:\Users\Administrator\Desktop\com-new0 - 副本\bin\Debug\sf.exe
+C:\Users\Administrator\Desktop\com-new0 - 副本\bin\Debug\sf.pdb
+C:\Users\Administrator\Desktop\com-new0 - 副本\bin\Debug\Nobi.StatusChart.pdb
+C:\Users\Administrator\Desktop\com-new0 - 副本\bin\Debug\ZGraph.xml
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\Termie.AboutBox.resources
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.Form1.resources
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.Form2.resources
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.Form3.resources
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.Form4.resources
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.Form5.resources
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.Properties.Resources.resources
+C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.csproj.GenerateResource.Cache
 C:\homework\Cantool\com - wb\bin\Debug\sf.exe.config
 C:\homework\Cantool\com - wb\obj\Debug\sf.csproj.ResolveComReference.cache
 C:\homework\Cantool\com - wb\obj\Debug\sf.exe
 C:\homework\Cantool\com - wb\obj\Debug\sf.pdb
-C:\homework\Cantool\com - wb\obj\Debug\sf.csprojResolveAssemblyReference.cache
-C:\homework\Cantool\com - wb\obj\Debug\Termie.AboutBox.resources
-C:\homework\Cantool\com - wb\obj\Debug\sf.Form1.resources
-C:\homework\Cantool\com - wb\obj\Debug\sf.Form2.resources
-C:\homework\Cantool\com - wb\obj\Debug\sf.Form3.resources
-C:\homework\Cantool\com - wb\obj\Debug\sf.Form4.resources
-C:\homework\Cantool\com - wb\obj\Debug\sf.Form5.resources
-C:\homework\Cantool\com - wb\obj\Debug\sf.Properties.Resources.resources
-C:\homework\Cantool\com - wb\obj\Debug\sf.csproj.GenerateResource.Cache
-C:\homework\Cantool\com - wb\bin\Debug\sf.exe
-C:\homework\Cantool\com - wb\bin\Debug\sf.pdb
-C:\homework\Cantool\com - wb\bin\Debug\Nobi.StatusChart.pdb
-C:\homework\Cantool\com - wb\bin\Debug\ZGraph.xml

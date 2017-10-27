@@ -28,6 +28,8 @@ namespace sf
         SerialPort _serialPort;
 		Thread _readThread;
 		volatile bool _keepReading;
+        public static int cou = 0;
+        string dataTemp = "";
 
         //开始Singleton模式
         static readonly CommPort instance = new CommPort();
@@ -80,16 +82,36 @@ namespace sf
 			}
         }
 
+        //private void JudgeTWO(int a,int b)
+        //{
+        //    for(int i=0;i<=)
+        //}
+
 		/// <summary> 获取数据并传递 </summary>
 		private void ReadPort()
 		{
-			while (_keepReading)
+            //int cou = 0,sum=0;
+            
+            
+            
+            while (_keepReading)
 			{
-				if (_serialPort.IsOpen)
+                //cou += 1;
+                if (_serialPort.IsOpen)
 				{
+                    
 					byte[] readBuffer = new byte[_serialPort.ReadBufferSize + 1];
 					try
 					{
+                        //cou += 1;
+                        //sum += cou;
+                        
+                        if (cou == 2)
+                        {
+                            dataTemp = "";
+                            cou = 0;
+                        }
+                            
                         // 如果串行端口上有字节可用
                         // 读取返回“计数”字节，但不会阻止（等待）
                         // 对于剩余的字节。如果没有字节可用
@@ -100,9 +122,21 @@ namespace sf
 						String SerialIn = System.Text.Encoding.ASCII.GetString(readBuffer,0,count);
 						DataReceived(SerialIn);
 
-                        //dataNum += SerialIn;
+                        dataTemp += SerialIn;
+                        if(dataTemp != "")
+                        {
+                            cou++;
+                        }
+                        //if(dataTemp!="" &&(dataTemp.Length>1))
+                        //{
+                        //    dataNum = dataTemp;
+                        //}
+                        if (dataTemp.Length > 10)
+                        {
+                            dataNum = dataTemp;
+                        }
 
-                       
+
 
 
                     }
