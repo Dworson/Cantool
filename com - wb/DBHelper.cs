@@ -91,8 +91,29 @@ namespace sf
             return length;
         }
 
+        //根据signalname获取其排列方式
+        public static int Getsigseq(string name)
+        {
+            conn.Open();
+            string sql = string.Format("select OriginAndLenth from CanSignal where SignalName = '{0}';", name);
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            object obj = cmd.ExecuteScalar();
+            String OriginAndLenth = "";
+            if (obj != null)
+            {
+                OriginAndLenth = obj.ToString();
+            }
+            int a = OriginAndLenth.IndexOf("@");
+            int b = OriginAndLenth.IndexOf("+");
+            string s = OriginAndLenth.Substring(a + 1, b - a - 1);
+            int seq = Convert.ToInt32(s);
+
+            conn.Close();
+            return seq;
+        }
+
         //根据signalname获取其A
-        public static int GetsiglA(string name)
+        public static double GetsiglA(string name)
         {
             conn.Open();
             string sql = string.Format("select A from CanSignal where SignalName = '{0}';", name);
@@ -103,13 +124,13 @@ namespace sf
             {
                 str = obj.ToString();
             }
-            int A = Convert.ToInt32(str);
+            double A = Convert.ToDouble(str);
             conn.Close();
             return A;
         }
 
         //根据signalname获取其B
-        public static int GetsiglB(string name)
+        public static double GetsiglB(string name)
         {
             conn.Open();
             string sql = string.Format("select B from CanSignal where SignalName = '{0}';", name);
@@ -120,7 +141,7 @@ namespace sf
             {
                 str = obj.ToString();
             }
-            int B = Convert.ToInt32(str);
+            double B = Convert.ToDouble(str);
             conn.Close();
             return B;
         }

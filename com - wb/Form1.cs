@@ -4,7 +4,6 @@ using System.Collections;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Termie;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.IO.Ports;
@@ -298,27 +297,21 @@ namespace sf
         private void outputList_SelectedIndexChanged(object sender, EventArgs e)
         {
             popUpMenu.MenuItems[0].Enabled = (outputList.SelectedItems.Count > 0);
-
+          
             string datanum = CommPort.dataNum;
-
+            dataDecodeing();
+            
             string Stard = datanum.Substring(0, 1);
-            string id = datanum.Substring(1, 3);
-            string dlc = datanum.Substring(4, 1);
-            string data = datanum.Substring(5, 16);
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(CommPort.dataNum.Substring(0, 1));
-
-            listViewItem1.SubItems.Add(id);
-            listViewItem1.SubItems.Add(dlc);
-            listViewItem1.SubItems.Add(data);
-
+            //string id = datanum.Substring(1, 3);
+            //string dlc = datanum.Substring(4, 1);
+            //string data = datanum.Substring(5, 16);
+            //System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(phy.);
             //listViewItem1.SubItems.Add(CommPort.dataNum.Substring(1, 3));
             //listViewItem1.SubItems.Add(CommPort.dataNum.Substring(4, 1));
             //listViewItem1.SubItems.Add(CommPort.dataNum.Substring(5, 20));
-            //listViewItem1.SubItems.Add(CommPort.dataNum.Substring(1, 3));
+            //listViewItem1.SubItems.Add(CommPort.dataNum.Substring(6, 1));
 
-
-
-            listView1.Items.Add(listViewItem1);
+            //listView1.Items.Add(listViewItem1);
         }
 
         /// <summary>
@@ -565,15 +558,7 @@ namespace sf
         /// <summary>
         /// 显示软件相关信息
         /// </summary>
-        private void button3_Click(object sender, EventArgs e)
-        {
-            TopMost = false;
-
-            AboutBox about = new AboutBox();
-            about.ShowDialog();
-
-            TopMost = Settings.Option.StayOnTop;
-        }
+        
 
         /// <summary>
         /// 关闭软件
@@ -711,22 +696,36 @@ namespace sf
             return result;
         }
 
-        //对app装置发来的消息做数据解析
-        void dataDecodeing()
+        //对cantool装置发来的消息做数据解析
+        public void dataDecodeing()
         {
             string datanum = CommPort.dataNum;
 
-            string strid = datanum.Substring(1, 3);
+            //截取第一位
+            string st = datanum.Substring(0, 1);
+            //初始化id和data
+            string strid = string.Empty;
+            string strdata = string.Empty;
+            if (st == "T" && datanum.Length==26)
+            {
+                //T开头读8位id
+                strid = datanum.Substring(1, 8);
+                strdata = datanum.Substring(10, 16);      
+            }
+            else
+            {
+                //获取16进制id
+                strid = datanum.Substring(1, 3);
+                //获取16进制data
+                strdata = datanum.Substring(5, 16);
+            }          
             //十六进制id转十进制整型
             int id = int.Parse(strid, NumberStyles.HexNumber);
-            //由id获取其包含signal的name和条数
+            //由id获取其包含signal的name
             ArrayList siglist = new ArrayList();
             siglist = DBHelper.Getsigname(id);
-            int signum = siglist.Count;
-
-            //获取16进制data
-            string strdata = datanum.Substring(5, 16); 
-            //先将data存入16个字符串
+             
+            //先将data存入字符串数组
             string[] temp = new string[16];
             for (int i = 0; i < 16; i++)
             {
@@ -739,7 +738,7 @@ namespace sf
                 temp2[i] = a.Remove(4, 1);
             } 
             int[,] bindata = new int[8, 8];
-            //合成8*8字符矩阵
+            //合成8*8 int矩阵
             for(int i = 0; i < 8; i++)
             {
                 for(int j = 0; j < 8; j++)
@@ -750,8 +749,6 @@ namespace sf
            //对每个信号进行处理
             foreach (string name in siglist)
             {
-                string can = string.Empty;
-
                 //获取该signal的起始位
                 int start = DBHelper.Getsigstart(name);
                 //转换到实际起始位置
@@ -760,55 +757,93 @@ namespace sf
                     start = 7 - start;
                 }else if(start>=8 && start <= 15)
                 {
-                    start = 15 - start;
+                    start = 15 - start + 8;
                 }else if (start >= 16 && start <= 23)
                 {
-                    start = 23 - start;
+                    start = 23 - start + 16;
                 }else if (start >= 24 && start <= 31)
                 {
-                    start = 31 - start;
+                    start = 31 - start + 24;
                 }else if (start >= 32 && start <= 39)
                 {
-                    start = 39 - start;
+                    start = 39 - start + 32;
                 }else if (start >= 40 && start <= 47)
                 {
-                    start = 47 - start;
+                    start = 47 - start + 40;
                 }else if (start >= 48 && start <= 55)
                 {
-                    start = 55 - start;
+                    start = 55 - start + 48;
                 }else if (start >= 56 && start <= 63)
                 {
-                    start = 63 - start;
+                    start = 63 - start + 56;
                 }
-                //获取起始位对应坐标
+                //获取起始位对应下标
                 int i = start / 8;
                 int j = start - 8 * i;
 
                 //获取该signal的长度
                 int len = DBHelper.Getsiglength(name);
 
-                //获取can信号
-                while (true)
+                //判断1+还是0+
+                int seq = DBHelper.Getsigseq(name);
+                //初始化can信号
+                string can = string.Empty;
+                if (seq == 0)
                 {
-                    can += bindata[i, j].ToString();
-                    j++;
-                    if (j == 8)
+                    //0+获取can信号
+                    while (true)
                     {
-                        j = 0;
-                        i++;
+                        can += bindata[i, j].ToString();
+                        if (j == 7)
+                        {
+                            j = 0;
+                            i++;
+                        }
+                        else
+                        {
+                            j++;
+                        }
+                        len--;
+                        if (len == 0) break;
                     }
-                    len--;
-                    if (len == 0) break;
+                }
+                else
+                {
+                    //1+获取can信号
+                    while (true)
+                    {
+                        can += bindata[i, j].ToString();
+                        if (j == 0)
+                        {
+                            j = 7;
+                            i++;
+                        }
+                        else
+                        {
+                            j--;
+                        }
+                        len--;
+                        if (len == 0) break;
+                    }
                 }
                 //can信号转为10进制
-                int cansig = Convert.ToInt32(can,2);
+                long cansig = Convert.ToInt64(can,2);
 
                 //获取A,B值，phy = can信号 * A + B
-                int A = DBHelper.GetsiglA(name);
-                int B = DBHelper.GetsiglB(name);
-                int phy = cansig * A + B;
-                MessageBox.Show(phy.ToString());
+                double A = DBHelper.GetsiglA(name);
+                double B = DBHelper.GetsiglB(name);
+                long phy = (long)(cansig * A + B);
+                //MessageBox.Show(phy.ToString());
+                //添加到listview
+                System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(id.ToString());
+                listViewItem1.SubItems.Add(name);
+                listViewItem1.SubItems.Add(can);
+                listViewItem1.SubItems.Add(phy.ToString());
+              
+                listView1.Items.Add(listViewItem1);
+
             }
+           
 
         }
 
@@ -905,17 +940,6 @@ namespace sf
 
         }
 
-        private void button6_Click_1(object sender, EventArgs e)
-        {
-            TopMost = false;
-
-            Form5 form5 = new Form5();
-            form5.ShowDialog();
-
-            TopMost = Settings.Option.StayOnTop;
-            Font = Settings.Option.MonoFont ? monoFont : origFont;
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -959,7 +983,7 @@ namespace sf
         }
 
         //物理值转化为Can信号
-        private int PsyToCanMessage(int psy, string text)
+        public int PsyToCanMessage(int psy, string text)
         {
             int can;
             string sql = string.Format("select B from CanSignal where SignalName= '{0}';", text);
@@ -1123,26 +1147,6 @@ namespace sf
 
         }
 
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            dataDecodeing();
-
-                //System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(CommPort.dataNum.Substring(0, 1));
-                //listViewItem1.SubItems.Add(CommPort.dataNum.Substring(1, 3));
-                //listViewItem1.SubItems.Add(CommPort.dataNum.Substring(4, 1));
-                //listViewItem1.SubItems.Add(CommPort.dataNum.Substring(5, 20));
-                //listViewItem1.SubItems.Add(CommPort.dataNum.Substring(1, 3));
-
-
-
-            //listView1.Items.Add(listViewItem1);
-
-
-        }
-
-        private void listView1_SelectedIndexChanged_2(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

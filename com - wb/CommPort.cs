@@ -122,18 +122,19 @@ namespace sf
 						String SerialIn = System.Text.Encoding.ASCII.GetString(readBuffer,0,count);
 						DataReceived(SerialIn);
 
-                        dataTemp += SerialIn;
-                        if(dataTemp != "")
+                        dataTemp += SerialIn;                     
+                        if (dataTemp != "")
                         {
                             cou++;
                         }
-                        //if(dataTemp!="" &&(dataTemp.Length>1))
-                        //{
-                        //    dataNum = dataTemp;
-                        //}
-                        if (dataTemp.Length > 10)
+                        if (dataTemp != "" && (dataTemp.Length > 1))
                         {
                             dataNum = dataTemp;
+                        }
+                        if (dataTemp.Length > 1)
+                        {
+                            dataNum = dataTemp;
+                            //Form1.dataDecodeing();
                         }
 
 

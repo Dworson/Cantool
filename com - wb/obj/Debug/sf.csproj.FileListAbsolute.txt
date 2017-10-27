@@ -121,7 +121,56 @@ C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.Form4.resources
 C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.Form5.resources
 C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.Properties.Resources.resources
 C:\Users\Administrator\Desktop\com-new0 - 副本\obj\Debug\sf.csproj.GenerateResource.Cache
-C:\homework\Cantool\com - wb\bin\Debug\sf.exe.config
-C:\homework\Cantool\com - wb\obj\Debug\sf.csproj.ResolveComReference.cache
-C:\homework\Cantool\com - wb\obj\Debug\sf.exe
-C:\homework\Cantool\com - wb\obj\Debug\sf.pdb
+F:\com-new0 - 副本\bin\Debug\sf.exe.config
+F:\com-new0 - 副本\obj\Debug\sf.csproj.ResolveComReference.cache
+F:\com-new0 - 副本\obj\Debug\sf.exe
+F:\com-new0 - 副本\obj\Debug\sf.pdb
+G:\com-new0 - 副本\bin\Debug\sf.exe.config
+G:\com-new0 - 副本\obj\Debug\sf.csproj.ResolveComReference.cache
+G:\com-new0 - 副本\obj\Debug\sf.exe
+G:\com-new0 - 副本\obj\Debug\sf.pdb
+G:\com-new0 - 副本\bin\Debug\sf.exe
+G:\com-new0 - 副本\bin\Debug\sf.pdb
+G:\com-new0 - 副本\bin\Debug\Nobi.StatusChart.pdb
+G:\com-new0 - 副本\bin\Debug\ZGraph.xml
+G:\com-new0 - 副本\obj\Debug\sf.csprojResolveAssemblyReference.cache
+G:\com-new0 - 副本\obj\Debug\Termie.AboutBox.resources
+G:\com-new0 - 副本\obj\Debug\sf.Form1.resources
+G:\com-new0 - 副本\obj\Debug\sf.Form2.resources
+G:\com-new0 - 副本\obj\Debug\sf.Form3.resources
+G:\com-new0 - 副本\obj\Debug\sf.Form4.resources
+G:\com-new0 - 副本\obj\Debug\sf.Form5.resources
+G:\com-new0 - 副本\obj\Debug\sf.Properties.Resources.resources
+G:\com-new0 - 副本\obj\Debug\sf.csproj.GenerateResource.Cache
+E:\com-new1- 副本\bin\Debug\sf.exe.config
+E:\com-new1- 副本\obj\Debug\sf.csproj.ResolveComReference.cache
+E:\com-new1- 副本\obj\Debug\sf.exe
+E:\com-new1- 副本\obj\Debug\sf.pdb
+E:\com-new1- 副本\obj\Debug\sf.csprojResolveAssemblyReference.cache
+E:\com-new1- 副本\obj\Debug\Termie.AboutBox.resources
+E:\com-new1- 副本\obj\Debug\sf.Form1.resources
+E:\com-new1- 副本\obj\Debug\sf.Form2.resources
+E:\com-new1- 副本\obj\Debug\sf.Form3.resources
+E:\com-new1- 副本\obj\Debug\sf.Form4.resources
+E:\com-new1- 副本\obj\Debug\sf.Form5.resources
+E:\com-new1- 副本\obj\Debug\sf.Properties.Resources.resources
+E:\com-new1- 副本\obj\Debug\sf.csproj.GenerateResource.Cache
+E:\com-new1- 副本\bin\Debug\sf.exe
+E:\com-new1- 副本\bin\Debug\sf.pdb
+E:\com-new1- 副本\bin\Debug\Nobi.StatusChart.pdb
+E:\com-new1- 副本\bin\Debug\ZGraph.xml
+C:\Users\Administrator\Desktop\com-new1- 副本\bin\Debug\sf.exe.config
+C:\Users\Administrator\Desktop\com-new1- 副本\obj\Debug\sf.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\com-new1- 副本\obj\Debug\sf.exe
+C:\Users\Administrator\Desktop\com-new1- 副本\obj\Debug\sf.pdb
+C:\Users\Administrator\Desktop\com-new1- 副本\bin\Debug\sf.exe
+C:\Users\Administrator\Desktop\com-new1- 副本\bin\Debug\sf.pdb
+C:\Users\Administrator\Desktop\com-new1- 副本\bin\Debug\Nobi.StatusChart.pdb
+C:\Users\Administrator\Desktop\com-new1- 副本\bin\Debug\ZGraph.xml
+C:\Users\Administrator\Desktop\com-new1- 副本\obj\Debug\sf.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\com-new1- 副本\obj\Debug\sf.Form1.resources
+C:\Users\Administrator\Desktop\com-new1- 副本\obj\Debug\sf.Form2.resources
+C:\Users\Administrator\Desktop\com-new1- 副本\obj\Debug\sf.Form3.resources
+C:\Users\Administrator\Desktop\com-new1- 副本\obj\Debug\sf.Form4.resources
+C:\Users\Administrator\Desktop\com-new1- 副本\obj\Debug\sf.Properties.Resources.resources
+C:\Users\Administrator\Desktop\com-new1- 副本\obj\Debug\sf.csproj.GenerateResource.Cache
